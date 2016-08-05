@@ -75,7 +75,7 @@
   "Additional expressions to highlight in Assembler mode.")
 
 (defun acme-mode ()
-  "Major mode for editing typical assembler code.
+  "Major mode for editing Acme Assembler code.
 Features a private abbrev table and the following bindings:
 
 \\[acme-colon]\toutdent a preceding label, tab to next tab stop.
@@ -89,7 +89,7 @@ Special commands:
 "
   (interactive)
   (kill-all-local-variables)
-  (setq mode-name "Assembler")
+  (setq mode-name "Acme Assembler")
   (setq major-mode 'acme-mode)
   (setq local-abbrev-table acme-mode-abbrev-table)
   (make-local-variable 'font-lock-defaults)
