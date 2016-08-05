@@ -17,7 +17,11 @@
   "Mode for editing assembler code."
   :group 'languages)
 
-(defvar acme-mode-syntax-table nil
+(defvar acme-mode-syntax-table
+  (let ((st (make-syntax-table)))
+    (modify-syntax-entry ?\; "< b" st)
+    (modify-syntax-entry ?\n "> b" st)
+    st)
   "Syntax table used while in Acme mode.")
 
 (defvar acme-mode-abbrev-table nil
@@ -89,8 +93,7 @@ Special commands:
   (make-local-variable 'font-lock-defaults)
   (setq font-lock-defaults '(acme-font-lock-keywords))
   (make-local-variable 'acme-mode-syntax-table)
-  (setq acme-mode-syntax-table (make-syntax-table))
-  (set-syntax-table acme-mode-syntax-table)
+  (set-syntax-table (make-syntax-table acme-mode-syntax-table))
   (setq tab-width 8)
   (use-local-map (nconc (make-sparse-keymap) acme-mode-map))
   (setq comment-start "; ")
