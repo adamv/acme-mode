@@ -1,7 +1,12 @@
 ;;;
-;;; acme-mode.el 
+;;; acme-mode.el
 ;;;
-;;; by Alexander Lehmann <afwlehmann@googlemail.com>
+;;; Additional work by Adam Vandenberg <flangy@gmail.com>
+;;;
+;;; History:
+;;; Based on acme-mode.el by Alexander Lehmann <afwlehmann@googlemail.com>
+;;; https://github.com/afwlehmann/acme-mode
+;;;
 ;;; heavily based on acme-mode.el by abad in 2008 (abad.flt at gmail.com)
 ;;;         based on asm-mode.el by Eric Raymond
 ;;;
