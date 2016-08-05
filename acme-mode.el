@@ -69,8 +69,9 @@
     ("\\s-+\\(\\+\\sw+\\)\\s-+"
      (1 font-lock-keyword-face))
     ;; numeric constants
-    ("\\b\\([$0-9][0-9a-fA-F]*\\)" 
-     . font-lock-constant-face))
+    ("\\s-\\(#?[$0-9][0-9a-fA-F]*\\)"
+     (1 font-lock-constant-face))
+    )
   "Additional expressions to highlight in Assembler mode.")
 
 (defun acme-mode ()
