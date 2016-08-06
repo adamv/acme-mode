@@ -122,11 +122,6 @@ Special commands:
   (insert "\n")
   (tab-to-tab-stop))
 
-(defun acme-line-matches (pattern &optional withcomment)
-  (save-excursion
-    (beginning-of-line)
-    (looking-at pattern)))
-
 (defun acme-assembly-target ()
   (if (string-match "!to \"\\(.*\\)\"" (buffer-string))
       (match-string 1 (buffer-string))
