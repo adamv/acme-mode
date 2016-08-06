@@ -113,6 +113,8 @@ Special commands:
   (insert ":")
   (tab-to-tab-stop))
 
+;; asm-mode uses 'newline-and-indent but the function below is more
+;; approrpriate for this mode, as it indents back to the first tab stop
 (defun acme-newline ()
   "Insert linefeed plus fill-prefix, to bring us back to code-indent level."
   (interactive)
