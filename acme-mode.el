@@ -109,7 +109,7 @@ Special commands:
   (save-excursion
     (beginning-of-line)
     (if (looking-at "[ \t]+\\(\\sw\\|\\s_\\)+$")
-	(delete-horizontal-space)))
+    (delete-horizontal-space)))
   (insert ":")
   (tab-to-tab-stop))
 
